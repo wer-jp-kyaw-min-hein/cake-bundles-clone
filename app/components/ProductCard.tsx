@@ -6,7 +6,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ image, name, price }: ProductCardProps) {
     return (
-        <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+        <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:scale-[1.02] transition duration-300">
             
             <img
             src={image}
