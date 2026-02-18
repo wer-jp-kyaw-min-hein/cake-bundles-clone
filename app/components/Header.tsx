@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-      <header className="border-b border-gray-200">
+      <header className="border-b border-[color:var(--line)]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           
           {/* Logo */}
