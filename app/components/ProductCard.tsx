@@ -8,13 +8,13 @@ interface ProductCardProps {
 
 export default function ProductCard({ image, name, price, tag, save }: ProductCardProps) {
     return (
-        <div className="group relative rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300">
+        <div className="group relative rounded-3xl overflow-hidden bg-white shadow-none hover:shadow-sm transition duration-300">
             {/* Image */}
             <div className="relative h-80 w-full">
                 <img
                 src={image}
                 alt={name}
-                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]"
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.01]"
                 />
             {/* soft overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
