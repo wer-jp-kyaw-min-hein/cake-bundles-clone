@@ -1,7 +1,14 @@
+'use client'
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Hero() {
+
+  const handleShopNow = () => {
+    const element = document.getElementById('cake-bundles')
+    if (element) {      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
     return (
         <section className="relative h-screen w-full overflow-hidden">
 
@@ -19,9 +26,9 @@ export default function Hero() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mb-4">The Bake Studio
           </h1>
           <p className="text-lg md:text-xl mb-6 max-w-2xl">Beautifully curated cake and flower bundles for every occasion.</p>
-          <Link href="/#cake-bundles" className="bg-rose-900 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-rose-800 transition">
+          <button onClick={handleShopNow} className="bg-rose-900 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-rose-800 transition">
             Shop Now
-          </Link>
+          </button>
         </div>
       </section>
     )
