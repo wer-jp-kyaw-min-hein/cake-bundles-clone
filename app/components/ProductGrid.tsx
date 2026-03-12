@@ -70,7 +70,7 @@ export default function ProductGrid() {
     ]
 
         return (
-            <section className="py-16 px-8 max-w-7xl mx-auto">
+            <section id="cake-bundles" className="py-16 px-8 max-w-7xl mx-auto">
 
                 <h2 className="text-4xl font-serif mb-10 text-center">Cake Bundles</h2>
 

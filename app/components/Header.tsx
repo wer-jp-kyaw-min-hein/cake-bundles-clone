@@ -5,7 +5,7 @@ export default function Header() {
     <header className="border-b border-black/10">
       <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
         <div className="text-3xl font-serif tracking-tight">
-          fieldnotes
+          The Bake Studio
         </div>
 
         <nav className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-gray-600">
