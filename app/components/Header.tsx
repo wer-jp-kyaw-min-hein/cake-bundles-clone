@@ -1,33 +1,31 @@
+import Link from "next/link"
+
 export default function Header() {
-    return (
-      <header className="border-b border-[color:var(--line)]">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          
-          {/* Logo */}
-          <div className="text-2xl font-serif">
-            fieldnotes
-          </div>
-  
-          {/* Navigation */}
-          <nav className="hidden md:flex gap-8 text-sm uppercase tracking-wide text-gray-600">
-            <a href="#">Same Day Pickup/Delivery</a>
-            <a href="#">CNY 2026</a>
-            <a href="#">VDAY 2026</a>
-            <a href="#">Shop</a>
-            <a href="#">Gifting</a>
-            <a href="#">Promotions</a>
-            <a href="#">Loyalty</a>
-          </nav>
-  
-          {/* Icons */}
-          <div className="flex gap-4 text-gray-600">
-            <span>🔍</span>
-            <span>👤</span>
-            <span>🛒</span>
-          </div>
-  
+  return (
+    <header className="border-b border-black/10">
+      <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+        <div className="text-3xl font-serif tracking-tight">
+          fieldnotes
         </div>
-      </header>
-    )
-  }
-  
+
+        <nav className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-gray-600">
+          <a href="#faq" className="hover:text-black transition">
+            FAQ
+          </a>
+          <Link href="/login" className="hover:text-black transition">
+            Login
+          </Link>
+          <Link href="/signup" className="hover:text-black transition">
+            Sign Up
+          </Link>
+        </nav>
+
+        <div className="flex gap-5 text-gray-600 text-lg">
+          <span>🔍</span>
+          <span>👤</span>
+          <span>🛒</span>
+        </div>
+      </div>
+    </header>
+  )
+}
