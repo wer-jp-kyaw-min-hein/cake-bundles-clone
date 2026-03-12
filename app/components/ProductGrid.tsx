@@ -99,7 +99,7 @@ export default function ProductGrid() {
                         <ProductCard
                             availableDate={product.availableDate}
                             isOpen={selectedId === product.id}
-                            onselect={() => 
+                            onSelect={() => 
                                 setSelectedId((prev) => (prev === product.id ? null : product.id))}
                             key={product.id}
                             image={product.image}
