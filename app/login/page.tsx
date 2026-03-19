@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function LoginPage() {
     return (
         <main className="min-h-screen flex items-center justify-center px-6 py-16">
-            <div className="w-full max-w-md bg-white rounded-2x1 shadow-sm border border-black/10 p-8">
+            <div className="w-full max-w-md bg-white rounded-2xl shadow-sm border border-black/10 p-8">
                 <h1 className="text-3xl font-serif text-center mb-6">Login</h1>
                 <form className="space-y-5">
                     <div>

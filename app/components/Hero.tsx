@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Hero() {
 
@@ -16,6 +15,7 @@ export default function Hero() {
         src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=2070&auto=format&fit=crop"
         alt="Cake Banner"
         fill
+        priority
         className="object-cover"
       />
 
