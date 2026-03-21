@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer() {
   return (
     <footer className="mt-20 bg-rose-300 text-black/70">
@@ -10,10 +12,14 @@ export default function Footer() {
             Newsletter
             </h3>
 
-            <p className="mt-4 max-w-md text-sm text-black/70">
+            <p className="mt-4 text-sm text-black/70 max-w-md">
               Subscribe to receive updates on new cake bundles, seasonal launches, and speical promotions.</p>
 
-              <form className="mt-6 flex max-w-md items-center overflow-hidden rounded-md border border-black/10" onSubmit={(e) => e.preventDefault()}>
+              <form
+    className="mt-6 flex items-center border border-black/10 rounded-md overflow-hidden max-w-md"
+    onSubmit={(e) => e.preventDefault()}
+  >
+
   <input
     type="email"
     name="email"
@@ -125,8 +131,8 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a className="hover:text-black" href="tel:+6565115900">
-                  Call: +65 6511 5900
+                <a className="hover:text-black" href="tel:+959752914328">
+                  Call: 09752914328
                 </a>
               </p>
               <p>
@@ -136,7 +142,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  WhatsApp: +65 9858 8204
+                  Viber: 09772898406
                 </a>
               </p>
             </div>
