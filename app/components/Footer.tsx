@@ -76,41 +76,11 @@ export default function Footer() {
               <li>
                 <a
                   className="hover:text-black"
-                  href="https://maps.google.com/?q=9+Yl+Neeh+Road"
+                  href="https://share.google/GQnzxa8pNSmtdUQrz"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  9 Yl Neeh Road (Dunman to E-log)
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-black"
-                  href="https://maps.google.com/?q=9+Raffles+City+Singapore+B1-61"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  9 Raffles City Singapore, B1-61
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-black"
-                  href="https://maps.google.com/?q=9+The+Woodleigh+Mall+B1-K17"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  9 The Woodleigh Mall, #B1-K17
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-black"
-                  href="https://maps.google.com/?q=9+Tampines+1+B1-K10"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  9 Tampines 1, #B1-K10
+                  Shwegondaing Rd, Yangon, Myanmar (Burma)
                 </a>
               </li>
             </ul>
@@ -153,16 +123,16 @@ export default function Footer() {
             <div className="mt-4 flex items-center gap-3">
               <a
                 className="grid h-9 w-9 place-items-center rounded-md border border-black/20 hover:border-black/40"
-                href="https://facebook.com/yourbrand"
+                href="https://www.facebook.com/105997538462740/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
               >
-                f
+                fb
               </a>
               <a
                 className="grid h-9 w-9 place-items-center rounded-md border border-black/20 hover:border-black/40"
-                href="https://instagram.com/yourbrand"
+                href="https://www.instagram.com/thebakestudio2020?igsh=eWI0cXhoYjRpYnF3"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -171,12 +141,12 @@ export default function Footer() {
               </a>
               <a
                 className="grid h-9 w-9 place-items-center rounded-md border border-black/20 hover:border-black/40"
-                href="https://tiktok.com/@yourbrand"
+                href="https://www.tiktok.com/@the.bake.studio"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="TikTok"
               >
-                t
+                tiktok
               </a>
             </div>
           </div>
