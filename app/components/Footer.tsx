@@ -93,14 +93,6 @@ export default function Footer() {
             </h3>
             <div className="mt-5 space-y-3 text-sm text-black/70">
               <p>
-                <a
-                  className="hover:text-black"
-                  href="mailto:hello@fieldnotes.com.sg"
-                >
-                  hello@fieldnotes.com.sg
-                </a>
-              </p>
-              <p>
                 <a className="hover:text-black" href="tel:+959752914328">
                   Call: 09752914328
                 </a>
@@ -159,10 +151,10 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-2 text-xs text-black/60">
-            <span className="rounded border border-black/20 px-2 py-1">VISA</span>
-            <span className="rounded border border-black/20 px-2 py-1">MC</span>
-            <span className="rounded border border-black/20 px-2 py-1">AMEX</span>
-            <span className="rounded border border-black/20 px-2 py-1">PAYNOW</span>
+            <span className="rounded border border-black/20 px-2 py-1">K-pay</span>
+            <span className="rounded border border-black/20 px-2 py-1">AYA-pay</span>
+            <span className="rounded border border-black/20 px-2 py-1">CB-pay</span>
+            <span className="rounded border border-black/20 px-2 py-1">MTB-pay</span>
           </div>
         </div>
       </div>
