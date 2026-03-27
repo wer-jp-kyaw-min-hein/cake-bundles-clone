@@ -1,73 +1,70 @@
 "use client"
 
-import { useState } from "react"
+type SortOption = "best-selling" | "newest"
 
-export default function Toolbar() {
-    const [open , setOpen] = useState(false)
+interface ToolbarProps {
+  productCount: number
+  filters: {
+    nextDayDelivery: boolean
+    giftReady: boolean
+    onSale: boolean
+  }
+  onFilterChange: (name: "nextDayDelivery" | "giftReady" | "onSale") => void
+  sortBy: SortOption
+  onSortChange: (value: SortOption) => void
+}
 
-    return (
-        <>
-        <div className="max-w-7xl mx-auto px-8 py-8 flex items-center justify-between">
+export default function Toolbar({
+  productCount,
+  filters,
+  onFilterChange,
+  sortBy,
+  onSortChange,
+}: ToolbarProps) {
+  return (
+    <div className="max-w-7xl mx-auto px-8 py-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+        <span className="font-medium text-black">{productCount} products</span>
 
-      <div className="flex items-center gap-6 text-sm text-gray-600">
-        <button 
-            onClick={() => setOpen(true)}
-            className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-full hover:border-black transition">
-          ☰ <span>Show filters</span>
-        </button>
-        <span>8 products</span>
+        <label className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            checked={filters.nextDayDelivery}
+            onChange={() => onFilterChange("nextDayDelivery")}
+          />
+          Next day delivery
+        </label>
+
+        <label className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            checked={filters.giftReady}
+            onChange={() => onFilterChange("giftReady")}
+          />
+          Gift ready
+        </label>
+
+        <label className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            checked={filters.onSale}
+            onChange={() => onFilterChange("onSale")}
+          />
+          On sale
+        </label>
       </div>
 
       <div className="flex items-center gap-3 text-sm text-gray-600">
-          <span>Sort by</span>
-          <select className="border-none font-medium text-black focus:outline-none">
-            <option>Best selling</option>
-            <option>Price, low to high</option>
-            <option>Price, high to low</option>
-            <option>Newest</option>
-          </select>
-        </div>
+        <span>Sort by</span>
+        <select
+          value={sortBy}
+          onChange={(e) => onSortChange(e.target.value as SortOption)}
+          className="rounded-md border border-gray-300 bg-white px-3 py-2 font-medium text-black focus:outline-none"
+        >
+          <option value="best-selling">Best selling</option>
+          <option value="newest">Newest</option>
+        </select>
       </div>
-
-       {/* Sidebar */}
-       <div
-       className={`fixed inset-0 bg-black/40 transition ${
-         open ? "opacity-100 visible" : "opacity-0 invisible"
-       }`}
-       onClick={() => setOpen(false)}
-     />
-
-     <div
-       className={`fixed top-0 left-0 h-full w-72 bg-white shadow-xl transition-transform duration-300 ${
-         open ? "translate-x-0" : "-translate-x-full"
-       }`}
-     >
-        <div className="p-6">
-          <h3 className="text-lg font-semibold mb-4">Filters</h3>
-
-          <div className="space-y-3 text-sm text-gray-600">
-            <label className="block">
-              <input type="checkbox" className="mr-2" />
-              Next day delivery
-            </label>
-            <label className="block">
-              <input type="checkbox" className="mr-2" />
-              Gift ready
-            </label>
-            <label className="block">
-              <input type="checkbox" className="mr-2" />
-              On sale
-            </label>
-          </div>
-
-          <button
-            onClick={() => setOpen(false)}
-            className="mt-6 w-full bg-black text-white py-2 rounded"
-          >
-            Apply
-          </button>
-        </div>
-      </div>
-    </>
+    </div>
   )
 }
