@@ -57,7 +57,7 @@ export default function ProductCard({
             Curated bundle for gifting
           </p>
 
-          <p className="mt-4 text-lg font-bold">${}</p>
+          <p className="mt-4 text-lg font-bold">View bundle details</p>
 
           {availableDate && (
             <p className="text-xs text-gray-500 mt-1">

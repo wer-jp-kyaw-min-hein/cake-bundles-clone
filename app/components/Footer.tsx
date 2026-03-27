@@ -13,7 +13,7 @@ export default function Footer() {
             </h3>
 
             <p className="mt-4 text-sm text-black/70 max-w-md">
-              Subscribe to receive updates on new cake bundles, seasonal launches, and speical promotions.</p>
+              Subscribe to receive updates on new cake bundles, seasonal launches, and special promotions.</p>
 
               <form
     className="mt-6 flex items-center border border-black/10 rounded-md overflow-hidden max-w-md"

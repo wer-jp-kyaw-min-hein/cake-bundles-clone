@@ -106,16 +106,16 @@ export default function ProductGrid() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {products.map((product) => (
-                        <ProductCard
-                        slug=""
-                            key={product.id}
-                            image={product.image}
-                            name={product.name}
-                            tag={product.tag}
-                            save={product.save}
-                            availableDate={product.availableDate}
-                        />
-                    ))}
+  <ProductCard
+    key={product.id}
+    slug={product.slug}
+    image={product.image}
+    name={product.name}
+    tag={product.tag}
+    save={product.save}
+    availableDate={product.availableDate}
+  />
+))}
                     </div>
 
             </section>

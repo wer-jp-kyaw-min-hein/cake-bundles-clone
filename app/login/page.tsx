@@ -5,7 +5,12 @@ export default function LoginPage() {
         <main className="min-h-screen flex items-center justify-center px-6 py-16">
             <div className="w-full max-w-md bg-white rounded-2xl shadow-sm border border-black/10 p-8">
                 <h1 className="text-3xl font-serif text-center mb-6">Login</h1>
-                <form className="space-y-5">
+                <form className="space-y-5"
+  onSubmit={(e) => {
+    e.preventDefault()
+    alert("Login system not implemented yet")
+  }}
+>
                     <div>
                         <label className="block text-sm mb-2">Email</label>
                         <input type="email" placeholder="Enter your email" className="w-full border border-black/10 rounded-lg px-4 py-3 outline-none focus:border-black/30" />
