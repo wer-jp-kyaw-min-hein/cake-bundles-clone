@@ -1,25 +1,9 @@
 import { notFound } from "next/navigation"
+import { PRODUCTS } from "@/lib/products"
 
-const products = [
-  {
-    slug: "strawberry-cake-bundle",
-    name: "Strawberry Cake Bundle",
-    description: "Beautiful strawberry cake bundle for gifting."
-  },
-  {
-    slug: "chocolate-flower-set",
-    name: "Chocolate Flower Set",
-    description: "Chocolate cake with elegant flowers."
-  },
-  {
-    slug: "classic-celebration-bundle",
-    name: "Classic Celebration Bundle",
-    description: "Perfect bundle for celebrations."
-  }
-]
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = products.find(p => p.slug === params.slug)
+  const product = PRODUCTS.find(p => p.slug === params.slug)
 
   if (!product) return notFound()
 
