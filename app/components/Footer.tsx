@@ -39,32 +39,30 @@ export default function Footer() {
               About Us
             </h3>
             <ul className="mt-5 space-y-3 text-sm">
-              <li>
-                <a className="hover:text-black" href="/delivery">
-                  Delivery &amp; Store Pickup
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-black" href="/store-locator">
-                  Store Locator
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-black" href="/promotions">
-                  Promotions
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-black" href="/careers">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-black" href="/terms">
-                  Terms &amp; Conditions
-                </a>
-              </li>
-            </ul>
+  <li>
+    <a className="hover:text-black" href="/about">
+      About Us
+    </a>
+  </li>
+
+  <li>
+    <a className="hover:text-black" href="/privacy">
+      Privacy Policy
+    </a>
+  </li>
+
+  <li>
+    <a className="hover:text-black" href="/contact">
+      Contact
+    </a>
+  </li>
+
+  <li>
+    <a className="hover:text-black" href="/terms">
+      Terms & Conditions
+    </a>
+  </li>
+</ul>
           </div>
 
           {/* Locate */}
