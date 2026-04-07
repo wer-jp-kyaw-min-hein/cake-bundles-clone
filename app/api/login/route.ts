@@ -1,33 +1,46 @@
-import { NextResponse } from "next/server"
-import { createSession } from "@/lib/session"
+import { NextResponse } from "next/server";
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcrypt";
+import { createSession } from "@/lib/session";
+
+const prisma = new PrismaClient();
 
 export async function POST(req: Request) {
-  const body = await req.json()
-  const email = String(body.email ?? "").trim()
-  const password = String(body.password ?? "")
+  const { email, password } = await req.json();
 
   if (!email || !password) {
     return NextResponse.json(
       { message: "Email and password are required." },
       { status: 400 }
-    )
+    );
   }
 
-  // Replace this with your real DB lookup
-  const isValidUser =
-    email === "demo@example.com" && password === "password123"
+  const user = await prisma.user.findUnique({
+    where: { email },
+  });
 
-  if (!isValidUser) {
+  if (!user) {
     return NextResponse.json(
       { message: "Invalid email or password." },
       { status: 401 }
-    )
+    );
+  }
+
+  const valid = await bcrypt.compare(password, user.password);
+
+  if (!valid) {
+    return NextResponse.json(
+      { message: "Invalid email or password." },
+      { status: 401 }
+    );
   }
 
   await createSession({
-    userId: "user_123",
-    email,
-  })
+    userId: user.id,
+    email: user.email,
+  });
 
-  return NextResponse.json({ message: "Login successful." })
+  return NextResponse.json({
+    message: "Login successful.",
+  });
 }
